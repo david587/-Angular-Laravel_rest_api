@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoldhum</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="impress">
+ 
+        <div id="dia1" class="step slide" data-x="0">
+            <h1>Zoldhum</h1>
+            <p>Fejlesztő: Sallai András</p>
+
+        </div>
+
+        <div id="dia2" class="step slide" data-x="1000">
+            <h1>Továbbfejlesztés</h1>
+            <pre>
+git clone https://github.com/andteki/zoldhum.git
+cd zoldhum
+composer install
+cp .env.example .env
+...
+            </pre>
+        </div>
+
+        <div id="dia3" class="step slide" data-x="2000">
+            <h1>Adatbázis</h1>
+            Hozzuk létre a database.sqlite fájlt:
+            <pre>
+touch database/database.sqlite                
+            </pre>
+            Szerkesszük a .env állományt:
+            <pre>
+DB_CONNECTION=sqlite
+# DB_HOST=127.0.0.1
+# DB_PORT=3306
+# DB_DATABASE=laravel
+# DB_USERNAME=root
+# DB_PASSWORD=
+            </pre>
+            Végezzük el a migrálást:
+            <pre>
+php artisan migrate
+php artisan key:generate                
+            </pre>
+        </div>
+
+        
+        <div id="dia4" class="step slide" data-x="3000" data-y="2000" data-rotate="30">
+            <h1>Végpontok</h1>
+            <table>
+                <tr>
+                    <th>végpont</th>
+                    <th>metódus</th>
+                    <th>azonosítás</th>
+                </tr>
+                <tr>
+                    <td>/api/register</td>
+                    <td>post</td>
+                    <td>nem</td>
+                    <td>új felhasználó</td>
+                </tr>
+                <tr>
+                    <td>/api/login</td>
+                    <td>post</td>
+                    <td>nem</td>
+                    <td>belépés</td>
+                </tr>
+                <tr>
+                    <td>/api/positions</td>
+                    <td>get</td>
+                    <td>nem</td>
+                    <td>beosztások lekérdezése</td>
+                </tr>
+                <tr>
+                    <td>/api/positions</td>
+                    <td>post</td>
+                    <td>nem</td>
+                    <td>új beosztás</td>
+                </tr>
+                <tr>
+                    <td>/api/positions/{id}</td>
+                    <td>put</td>
+                    <td>nem</td>
+                    <td>beosztás frissítése</td>
+                </tr>
+                <tr>
+                    <td>/api/positions/{id}</td>
+                    <td>delete</td>
+                    <td>nem</td>
+                    <td>beosztás törlése</td>
+                </tr>
+                <tr>
+                    <td>/api/employees</td>
+                    <td>get</td>
+                    <td>nem</td>
+                    <td>dolgozók lekérdezése</td>
+                </tr>
+                <tr>
+                    <td>/api/employees</td>
+                    <td>post</td>
+                    <td>igen</td>
+                    <td>új dolgozó</td>
+                </tr>
+                <tr>
+                    <td>/api/employees/{id}</td>
+                    <td>put</td>
+                    <td>igen</td>
+                    <td>dolgozó frissítése</td>
+                </tr>
+                <tr>
+                    <td>/api/employees/{id}</td>
+                    <td>delete</td>
+                    <td>igen</td>
+                    <td>dolgozó törlése</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="overview" class="step" data-x="1000" data-y="0" data-scale="6"></div>
+
+
+    </div>
+        
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>  
+    
+</body>
+</html>

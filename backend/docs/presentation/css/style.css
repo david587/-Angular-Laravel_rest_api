@@ -1,0 +1,12 @@
+.slide {
+    width: 600px;
+    height: 420px;
+    background-color: skyblue;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 15px 15px 15px rgb(100, 193, 230);
+}
+
+.slide h1 {
+    text-align: center;
+}
